@@ -2,15 +2,15 @@ Summary:	Dictionary file of Python modules for use with vim's completion
 Summary(pl):	Plik s³ownikowy modu³ów Pythona do u¿ycia z dope³nianiem identyfikatorów vima
 Name:		vim-pydiction
 Version:	0.5
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Development/Tools
 # renamed from http://www.vim.org/scripts/download_script.php?src_id=2668
 Source0:	pydiction-0.5.tar.gz
 # Source0-md5:	f7189a21c88d2dd9fbdd2a2a7dd2b981
 URL:		http://www.vim.org/scripts/script.php?script_id=805
-BuildRequires:	dos2unix
-Requires:	python >= 2.3
+%pyrequires_eq	python
+%pyrequires_eq	python-modules
 Requires:	python-numpy
 Requires:	vim >= 6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -31,11 +31,13 @@ pydiction, umo¿liwiaj±cym dodawanie do s³ownika w³asnych modu³ów.
 %prep
 %setup -q -n pydiction-%{version}
 
-dos2unix pydiction.py
-
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/pydiction}
+
+mv pydiction.py pydiction.py.dos
+sed 's/
+//' < pydiction.py.dos > pydiction.py
 
 install pydiction.py   $RPM_BUILD_ROOT%{_bindir}
 install pydiction   $RPM_BUILD_ROOT%{_datadir}/pydiction
