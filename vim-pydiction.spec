@@ -39,8 +39,8 @@ mv pydiction.py pydiction.py.dos
 sed 's/
 //' < pydiction.py.dos > pydiction.py
 
-install pydiction.py   $RPM_BUILD_ROOT%{_bindir}
-install pydiction   $RPM_BUILD_ROOT%{_datadir}/pydiction
+install pydiction.py	$RPM_BUILD_ROOT%{_bindir}
+install pydiction	$RPM_BUILD_ROOT%{_datadir}/pydiction
 
 %clean
 rm -rf $RPM_BUILD_ROOT
