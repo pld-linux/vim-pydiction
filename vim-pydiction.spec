@@ -8,7 +8,7 @@ Group:		Development/Tools
 # renamed from http://www.vim.org/scripts/download_script.php?src_id=2668
 Source0:	pydiction-0.5.tar.gz
 # Source0-md5:	f7189a21c88d2dd9fbdd2a2a7dd2b981
-URL:		http://www.vim.org/scripts/script.php?script_id=805
+URL:		http://www.vim.org/scripts/script.php?script_id=850
 %pyrequires_eq	python
 %pyrequires_eq	python-modules
 Requires:	python-numpy
