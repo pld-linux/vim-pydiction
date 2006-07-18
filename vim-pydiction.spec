@@ -11,7 +11,6 @@ Source0:	pydiction-0.5.tar.gz
 URL:		http://www.vim.org/scripts/script.php?script_id=850
 %pyrequires_eq	python
 %pyrequires_eq	python-modules
-Requires:	python-Numeric
 Requires:	vim >= 6.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
