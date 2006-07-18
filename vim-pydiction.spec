@@ -11,10 +11,10 @@ Source0:	pydiction-0.5.tar.gz
 URL:		http://www.vim.org/scripts/script.php?script_id=850
 %pyrequires_eq	python
 %pyrequires_eq	python-modules
-Requires:	python-numpy
+Requires:	python-Numeric
 Requires:	vim >= 6.0
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 pydiction is a special dictionary file of Python modules for use with
