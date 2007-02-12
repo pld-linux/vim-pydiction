@@ -1,5 +1,5 @@
 Summary:	Dictionary file of Python modules for use with vim's completion
-Summary(pl):	Plik s≥ownikowy modu≥Ûw Pythona do uøycia z dope≥nianiem identyfikatorÛw vima
+Summary(pl.UTF-8):   Plik s≈Çownikowy modu≈Ç√≥w Pythona do u≈ºycia z dope≈Çnianiem identyfikator√≥w vima
 Name:		vim-pydiction
 Version:	0.5
 Release:	2
@@ -21,11 +21,11 @@ vim's completion feature. pydiction.py is a program that generates the
 pydiction file and you can use it to add your project's own modules to
 it.
 
-%description -l pl
-pydiction jest specjalizowanym plikiem s≥ownika modu≥Ûw Pythona do
-uøycia z funkcjonalno∂ci± dope≥niania identyfikatorÛw w vimie.
-pydiction.py jest programem s≥uø±cym do generowania pliku s≥ownika
-pydiction, umoøliwiaj±cym dodawanie do s≥ownika w≥asnych modu≥Ûw.
+%description -l pl.UTF-8
+pydiction jest specjalizowanym plikiem s≈Çownika modu≈Ç√≥w Pythona do
+u≈ºycia z funkcjonalno≈õciƒÖ dope≈Çniania identyfikator√≥w w vimie.
+pydiction.py jest programem s≈Çu≈ºƒÖcym do generowania pliku s≈Çownika
+pydiction, umo≈ºliwiajƒÖcym dodawanie do s≈Çownika w≈Çasnych modu≈Ç√≥w.
 
 %prep
 %setup -q -n pydiction-%{version}
