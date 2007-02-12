@@ -1,5 +1,5 @@
 Summary:	Dictionary file of Python modules for use with vim's completion
-Summary(pl.UTF-8):   Plik słownikowy modułów Pythona do użycia z dopełnianiem identyfikatorów vima
+Summary(pl.UTF-8):	Plik słownikowy modułów Pythona do użycia z dopełnianiem identyfikatorów vima
 Name:		vim-pydiction
 Version:	0.5
 Release:	2
