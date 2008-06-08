@@ -11,7 +11,7 @@ Source0:	pydiction-0.5.tar.gz
 URL:		http://www.vim.org/scripts/script.php?script_id=850
 %pyrequires_eq	python
 %pyrequires_eq	python-modules
-Requires:	vim >= 6.0
+Requires:	vim-rt >= 6.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,13 +30,13 @@ pydiction, umożliwiającym dodawanie do słownika własnych modułów.
 %prep
 %setup -q -n pydiction-%{version}
 
-%install
-rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/pydiction}
-
 mv pydiction.py pydiction.py.dos
 sed 's/
 //' < pydiction.py.dos > pydiction.py
+
+%install
+rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/pydiction}
 
 install pydiction.py	$RPM_BUILD_ROOT%{_bindir}
 install pydiction	$RPM_BUILD_ROOT%{_datadir}/pydiction
