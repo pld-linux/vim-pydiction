@@ -6,9 +6,12 @@ Release:	2
 License:	GPL v2
 Group:		Development/Tools
 # renamed from http://www.vim.org/scripts/download_script.php?src_id=2668
-Source0:	pydiction-0.5.tar.gz
+Source0:	pydiction-%{version}.tar.gz
 # Source0-md5:	f7189a21c88d2dd9fbdd2a2a7dd2b981
 URL:		http://www.vim.org/scripts/script.php?script_id=850
+BuildRequires:	rpm-pythonprov
+BuildRequires:	rpmbuild(macros) >= 1.565
+BuildRequires:	sed >= 4.0
 %pyrequires_eq	python
 %pyrequires_eq	python-modules
 Requires:	vim-rt >= 6.0
@@ -29,10 +32,7 @@ pydiction, umożliwiającym dodawanie do słownika własnych modułów.
 
 %prep
 %setup -q -n pydiction-%{version}
-
-mv pydiction.py pydiction.py.dos
-sed 's/
-//' < pydiction.py.dos > pydiction.py
+%undos pydiction.py
 
 %install
 rm -rf $RPM_BUILD_ROOT
